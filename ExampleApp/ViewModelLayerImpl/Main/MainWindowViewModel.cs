@@ -3,26 +3,26 @@
 	using System.Collections.Generic;
 	using System.Globalization;
 	using Common.ArgumentMust;
-	using Translation.TranslationManager;
+	using Translation.TranslationSelector;
 	using ViewModelLayer.Main;
 
 	public class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
 	{
-		private readonly ITranslationManager _translationManager;
+		private readonly ITranslationSelector _translationSelector;
 
 		private CultureInfo _selectedCultureInfo;
 
 		private TestEnum _selectedNumber;
 
-		public MainWindowViewModel(ITranslationManager translationManager)
+		public MainWindowViewModel(ITranslationSelector translationSelector)
 		{
-			ArgumentMust.NotBeNull(() => translationManager);
+			ArgumentMust.NotBeNull(() => translationSelector);
 
-			_translationManager = translationManager;
-			_selectedCultureInfo = _translationManager.CurrentUiCulture;
+			_translationSelector = translationSelector;
+			_selectedCultureInfo = _translationSelector.CurrentUiCulture;
 		}
 
-		public IEnumerable<CultureInfo> Cultures => TranslationManager.Cultures;
+		public IEnumerable<CultureInfo> Cultures => TranslationSelector.Cultures;
 
 		public TestEnum SelectedNumber
 		{
@@ -48,7 +48,7 @@
 				{
 					_selectedCultureInfo = value;
 					OnPropertyChanged();
-					_translationManager.CurrentUiCulture = value;
+					_translationSelector.CurrentUiCulture = value;
 				}
 			}
 		}

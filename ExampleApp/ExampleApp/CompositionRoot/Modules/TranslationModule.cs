@@ -2,9 +2,9 @@
 {
 	using Common.ArgumentMust;
 	using Ninject.Modules;
-	using Translation.TranslationManager;
 	using Translation.TranslationMessenger;
 	using Translation.TranslationProvider;
+	using Translation.TranslationSelector;
 	using ViewLayer.Translation;
 
 	internal class TranslationModule : NinjectModule
@@ -13,7 +13,7 @@
 		{
 			ArgumentMust.NotBeNull(() => Kernel);
 
-			Kernel.Bind<ITranslationManager>().To<TranslationManager>().InSingletonScope();
+			Kernel.Bind<ITranslationSelector>().To<TranslationSelector>().InSingletonScope();
 			Kernel.Bind<ITranslationProvider>().To<TranslationProvider>().InSingletonScope();
 			Kernel.Bind<ITranslationMessenger>().To<TranslationMessenger>().InSingletonScope();
 		}
