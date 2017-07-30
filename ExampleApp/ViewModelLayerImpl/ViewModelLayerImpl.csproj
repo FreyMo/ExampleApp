@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C3500386-67B2-4C02-BA4D-83B7551F76EA}</ProjectGuid>
+    <ProjectGuid>{6205F10E-1760-4A13-94CB-42588B385063}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Translation</RootNamespace>
-    <AssemblyName>Translation</AssemblyName>
+    <RootNamespace>ViewModelLayerImpl</RootNamespace>
+    <AssemblyName>ViewModelLayerImpl</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -35,31 +35,23 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main\MainWindowViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TranslationMessenger\TranslationMessenger.cs" />
-    <Compile Include="TranslationMessenger\CultureChangedMessage.cs" />
-    <Compile Include="TranslationMessenger\ITranslationMessenger.cs" />
-    <Compile Include="TranslatableEnum\TranslatableEnumAdapter.cs" />
-    <Compile Include="TranslatableEnum\TranslatableEnumValue.cs" />
-    <Compile Include="TranslationManager\ITranslationManager.cs" />
-    <Compile Include="TranslationProvider\ITranslationProvider.cs" />
-    <Compile Include="TranslationAdapter\TranslationAdapter.cs" />
-    <Compile Include="TranslationManager\TranslationManager.cs" />
+    <Compile Include="ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Common\Common\Common.csproj">
+    <ProjectReference Include="..\..\..\Common\Common\Common.csproj">
       <Project>{DFC42C3A-5CF6-4CD0-BE1B-4531262ED3F1}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Common\Messenger\Messenger.csproj">
-      <Project>{0578B7B8-71C5-4EC3-AE52-F60E62F781B6}</Project>
-      <Name>Messenger</Name>
+    <ProjectReference Include="..\Translation\Translation.csproj">
+      <Project>{c3500386-67b2-4c02-ba4d-83b7551f76ea}</Project>
+      <Name>Translation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceLocation\ServiceLocation.csproj">
-      <Project>{498dc787-03ac-4ba1-841e-0762fc79fabd}</Project>
-      <Name>ServiceLocation</Name>
+    <ProjectReference Include="..\ViewModelLayer\ViewModelLayer.csproj">
+      <Project>{6a25609d-ddc8-497a-bcbd-e91d2bd994bf}</Project>
+      <Name>ViewModelLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

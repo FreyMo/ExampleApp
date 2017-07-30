@@ -16,9 +16,7 @@
 	
 	<StackPanel>
 		
-		<Button Margin="0,40,0,0" Content="{t:TranslatableText Key=ButtonText}"/>
-		
-		<Button Margin="0,3,0,0" Content="{t:TranslatableText ButtonText}" />
+		<Button Margin="0,40,0,0" Content="{t:TranslatableText ButtonText}"/>
 		
 		<ComboBox ItemsSource="{t:TranslatableEnums {x:Type mainViewModel:TestEnum}}"
 				  SelectedValue="{Binding SelectedNumber, Mode=TwoWay}" />
