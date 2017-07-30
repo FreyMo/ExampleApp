@@ -7,23 +7,18 @@
 
 	public class TranslatableTextExtension : MarkupExtension
 	{
-		public TranslatableTextExtension()
-		{
-		}
-
+		private readonly string _key;
+		
 		public TranslatableTextExtension(string key)
 		{
-			Key = key;
+			_key = key;
 		}
-		
-		[ConstructorArgument("key")]
-		public string Key { get; set; }
 
 		public override object ProvideValue(IServiceProvider serviceProvider)
 		{
 			var binding = new Binding(nameof(TranslationAdapter.Value))
 			{
-				Source = new TranslationAdapter(Key)
+				Source = new TranslationAdapter(_key)
 			};
 			
 			return binding.ProvideValue(serviceProvider);

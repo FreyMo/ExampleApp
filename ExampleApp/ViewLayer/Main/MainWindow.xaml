@@ -7,7 +7,7 @@
         xmlns:mainViewModel="clr-namespace:ViewModelLayer.Main;assembly=ViewModelLayer"
         xmlns:t="clr-namespace:ViewLayer.Translation.MarkupExtensions"
         mc:Ignorable="d"
-        Title="{x:Static res:Resources.MainWindowTitle}" Height="350" Width="525"
+		Title="{x:Static res:Resources.MainWindowTitle}" Height="350" Width="525"
 		DataContext="{Binding Path=MainWindowViewModel, Source={StaticResource ViewModelServiceLocator}}">
 
 	<Window.Resources>
@@ -17,10 +17,10 @@
 	<StackPanel>
 		
 		<Button Margin="0,40,0,0" Content="{t:TranslatableText ButtonText}"/>
-		
+
 		<ComboBox ItemsSource="{t:TranslatableEnums {x:Type mainViewModel:TestEnum}}"
-				  SelectedValue="{Binding SelectedNumber, Mode=TwoWay}" />
-		
+		          SelectedValue="{Binding SelectedNumber, Mode=TwoWay}" />
+
 		<ComboBox ItemsSource="{Binding Path=Cultures}"
 				  SelectedItem="{Binding SelectedCulture, Mode=TwoWay}"
 				  ItemTemplate="{StaticResource CultureInfoTemplate}" />

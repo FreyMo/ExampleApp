@@ -41,10 +41,10 @@
     <Compile Include="TranslationMessenger\ITranslationMessenger.cs" />
     <Compile Include="TranslatableEnum\TranslatableEnumAdapter.cs" />
     <Compile Include="TranslatableEnum\TranslatableEnumValue.cs" />
-    <Compile Include="TranslationManager\ITranslationManager.cs" />
-    <Compile Include="TranslationProvider\ITranslationProvider.cs" />
+    <Compile Include="TranslationSelector\ITranslationSelector.cs" />
+    <Compile Include="Translator\ITranslator.cs" />
     <Compile Include="TranslationAdapter\TranslationAdapter.cs" />
-    <Compile Include="TranslationManager\TranslationManager.cs" />
+    <Compile Include="TranslationSelector\TranslationSelector.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\Common\Common.csproj">

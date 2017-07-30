@@ -5,19 +5,19 @@
 	using Common.Attributes;
 	using Common.Extensions;
 	using Common.Notification;
-	using TranslationProvider;
+	using Translator;
 
 	public class TranslatableEnumValue : BindableBase
 	{
 		private readonly string _key;
-		private readonly ITranslationProvider _translationProvider;
+		private readonly ITranslator _translator;
 
-		public TranslatableEnumValue(object enumValue, ITranslationProvider translationProvider)
+		public TranslatableEnumValue(object enumValue, ITranslator translator)
 		{
-			ArgumentMust.NotBeNull(() => translationProvider);
+			ArgumentMust.NotBeNull(() => translator);
 
 			Value = enumValue;
-			_translationProvider = translationProvider;
+			_translator = translator;
 
 			var attribute = GetDescriptionKeyAttribute(enumValue);
 			if (attribute != null)
@@ -26,7 +26,7 @@
 			}
 		}
 
-		public object TranslatedName => _translationProvider.Translate(_key);
+		public string TranslatedName => _translator.Translate(_key);
 
 		public object Value { get; }
 

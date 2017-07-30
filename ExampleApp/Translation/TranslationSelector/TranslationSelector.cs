@@ -1,4 +1,4 @@
-﻿namespace Translation.TranslationManager
+﻿namespace Translation.TranslationSelector
 {
 	using System.Collections.Generic;
 	using System.Globalization;
@@ -6,11 +6,11 @@
 	using Common.ArgumentMust;
 	using TranslationMessenger;
 
-	public class TranslationManager : ITranslationManager
+	public class TranslationSelector : ITranslationSelector
 	{
 		private readonly ITranslationMessenger _messenger;
 
-		public TranslationManager(ITranslationMessenger messenger)
+		public TranslationSelector(ITranslationMessenger messenger)
 		{
 			ArgumentMust.NotBeNull(() => messenger);
 

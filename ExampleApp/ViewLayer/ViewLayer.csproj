@@ -65,10 +65,10 @@
     </Compile>
     <Compile Include="Translation\MarkupExtensions\TranslatableEnumsExtension.cs" />
     <Compile Include="Translation\MarkupExtensions\TranslatableTextExtension.cs" />
-    <Compile Include="Translation\TranslationProvider.cs" />
+    <Compile Include="Translation\Translator.cs" />
     <Page Include="DataTemplates\CultureInfoTemplate.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Main\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -132,6 +132,10 @@
     <ProjectReference Include="..\..\..\Common\Common\Common.csproj">
       <Project>{DFC42C3A-5CF6-4CD0-BE1B-4531262ED3F1}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Messenger\Messenger.csproj">
+      <Project>{0578b7b8-71c5-4ec3-ae52-f60e62f781b6}</Project>
+      <Name>Messenger</Name>
     </ProjectReference>
     <ProjectReference Include="..\Translation\Translation.csproj">
       <Project>{c3500386-67b2-4c02-ba4d-83b7551f76ea}</Project>

@@ -1,8 +1,8 @@
-﻿namespace Translation.TranslationManager
+﻿namespace Translation.TranslationSelector
 {
 	using System.Globalization;
 
-	public interface ITranslationManager
+	public interface ITranslationSelector
 	{
 		CultureInfo CurrentUiCulture { get; set; }
 	}
