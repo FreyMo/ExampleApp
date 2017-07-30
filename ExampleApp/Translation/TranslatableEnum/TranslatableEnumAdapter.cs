@@ -8,7 +8,7 @@
 	using Messenger.Messenger;
 	using ServiceLocation;
 	using TranslationMessenger;
-	using TranslationProvider;
+	using Translator;
 
 	public class TranslatableEnumAdapter : BindableBase, ISubscriber<CultureChangedMessage>
 	{
@@ -16,23 +16,23 @@
 
 		public TranslatableEnumAdapter(Type enumType) : this(
 			enumType,
-			ServiceLocator.Instance.Get<ITranslationProvider>(),
+			ServiceLocator.Instance.Get<ITranslator>(),
 			ServiceLocator.Instance.Get<ITranslationMessenger>())
 		{
 		}
 
 		public TranslatableEnumAdapter(
 			Type enumType,
-			ITranslationProvider translationProvider,
+			ITranslator translator,
 			ITranslationMessenger translationMessenger)
 		{
 			ArgumentMust.BeEnum(() => enumType);
-			ArgumentMust.NotBeNull(() => translationProvider);
+			ArgumentMust.NotBeNull(() => translator);
 			ArgumentMust.NotBeNull(() => translationMessenger);
 
 			translationMessenger.SubscribeTo(this);
 
-			PopulateEnumValues(enumType, translationProvider);
+			PopulateEnumValues(enumType, translator);
 		}
 
 		public object Values => _translatableEnumValues.ToList();
@@ -42,11 +42,11 @@
 			OnPropertyChanged(nameof(Values));
 		}
 
-		private void PopulateEnumValues(Type enumType, ITranslationProvider translationProvider)
+		private void PopulateEnumValues(Type enumType, ITranslator translator)
 		{
 			_translatableEnumValues = (from object enumValue
 				in Enum.GetValues(enumType)
-				select new TranslatableEnumValue(enumValue, translationProvider)).ToList();
+				select new TranslatableEnumValue(enumValue, translator)).ToList();
 		}
 	}
 }
