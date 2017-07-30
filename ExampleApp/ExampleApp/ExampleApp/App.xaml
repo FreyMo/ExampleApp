@@ -1,0 +1,19 @@
+﻿<Application x:Class="ExampleApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:compositionRoot="clr-namespace:ExampleApp.CompositionRoot"
+             StartupUri="pack://application:,,,/ViewLayer;component/Main/MainWindow.xaml">
+	
+    <Application.Resources>
+		<ResourceDictionary>
+
+			<compositionRoot:ViewModelServiceLocator x:Key="ViewModelServiceLocator"/>
+
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="pack://application:,,,/ViewLayer;component/Styles/Standard/Theme.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+			
+		</ResourceDictionary>
+	</Application.Resources>
+	
+</Application>
