@@ -59,7 +59,7 @@
     <Compile Include="CompositionRoot\Modules\MainModule.cs" />
     <Compile Include="CompositionRoot\Modules\ServiceLocationModule.cs" />
     <Compile Include="CompositionRoot\Modules\TranslationModule.cs" />
-    <Compile Include="CompositionRoot\ViewModelServiceLocator.cs" />
+    <Compile Include="CompositionRoot\CompositionRoot.cs" />
     <Compile Include="Settings\Application.Designer.cs">
       <DependentUpon>Application.settings</DependentUpon>
       <AutoGen>True</AutoGen>

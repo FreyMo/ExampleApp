@@ -66,6 +66,7 @@
     <Compile Include="Translation\MarkupExtensions\TranslatableEnumsExtension.cs" />
     <Compile Include="Translation\MarkupExtensions\TranslatableTextExtension.cs" />
     <Compile Include="Translation\Translator.cs" />
+    <Compile Include="ViewModelLocator\ViewModelLocatorExtension.cs" />
     <Page Include="DataTemplates\CultureInfoTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -82,13 +83,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Styles\Standard\TextBox.xaml">
+    <Page Include="Styles\Standard\Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Standard\TextBlock.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\Standard\Theme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Standard\Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +145,10 @@
     <ProjectReference Include="..\..\..\Common\Messenger\Messenger.csproj">
       <Project>{0578b7b8-71c5-4ec3-ae52-f60e62f781b6}</Project>
       <Name>Messenger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceLocation\ServiceLocation.csproj">
+      <Project>{498dc787-03ac-4ba1-841e-0762fc79fabd}</Project>
+      <Name>ServiceLocation</Name>
     </ProjectReference>
     <ProjectReference Include="..\Translation\Translation.csproj">
       <Project>{c3500386-67b2-4c02-ba4d-83b7551f76ea}</Project>

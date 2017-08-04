@@ -39,7 +39,7 @@
 			{
 				_comboBox = target.TargetObject.Cast<ComboBox>();
 				_comboBox.DisplayMemberPath = nameof(TranslatableEnumValue.TranslatedName);
-				_comboBox.SelectedValuePath = nameof(TranslatableEnumValue.Value);
+				_comboBox.SelectedValuePath = nameof(TranslatableEnumValue.EnumValue);
 			}
 		}
 

@@ -12,14 +12,14 @@
 		private readonly string _key;
 		private readonly ITranslator _translator;
 
-		public TranslatableEnumValue(object enumValue, ITranslator translator)
+		public TranslatableEnumValue(object enumEnumValue, ITranslator translator)
 		{
 			ArgumentMust.NotBeNull(() => translator);
 
-			Value = enumValue;
+			EnumValue = enumEnumValue;
 			_translator = translator;
 
-			var attribute = GetDescriptionKeyAttribute(enumValue);
+			var attribute = GetDescriptionKeyAttribute(enumEnumValue);
 			if (attribute != null)
 			{
 				_key = attribute.Key;
@@ -28,7 +28,7 @@
 
 		public string TranslatedName => _translator.Translate(_key);
 
-		public object Value { get; }
+		public object EnumValue { get; }
 
 		private static DescriptionKeyAttribute GetDescriptionKeyAttribute(object enumValue)
 		{

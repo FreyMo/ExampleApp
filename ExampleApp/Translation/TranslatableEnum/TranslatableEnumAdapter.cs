@@ -45,8 +45,8 @@
 		private void PopulateEnumValues(Type enumType, ITranslator translator)
 		{
 			_translatableEnumValues = (from object enumValue
-				in Enum.GetValues(enumType)
-				select new TranslatableEnumValue(enumValue, translator)).ToList();
+			                           in Enum.GetValues(enumType)
+			                           select new TranslatableEnumValue(enumValue, translator)).ToList();
 		}
 	}
 }

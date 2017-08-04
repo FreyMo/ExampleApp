@@ -1,17 +1,16 @@
 ﻿namespace ExampleApp.CompositionRoot.Modules
 {
-	using Common.ArgumentMust;
 	using Ninject;
 	using Ninject.Modules;
 	using ServiceLocation;
+	using ServiceLocation.ViewModelLocator;
 
 	internal class ServiceLocationModule : NinjectModule
 	{
 		public override void Load()
 		{
-			ArgumentMust.NotBeNull(() => Kernel);
-
-			var temp = Kernel.Get<Creator>();
+			Kernel.Get<Creator>();
+			Kernel.Bind<IViewModelLocator>().To<ViewModelLocator>().InSingletonScope();
 		}
 	}
 }

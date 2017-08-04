@@ -1,5 +1,6 @@
 ﻿namespace ServiceLocation
 {
+	using System;
 	using Ninject;
 
 	public class ServiceLocator
@@ -11,6 +12,11 @@
 		public T Get<T>()
 		{
 			return Instance._kernel.Get<T>();
+		}
+
+		public object Get(Type type)
+		{
+			return Instance._kernel.Get(type);
 		}
 
 		private ServiceLocator(IKernel kernel)

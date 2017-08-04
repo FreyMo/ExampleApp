@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<Color x:Key="Background">#EEEEEE</Color>
+	<Color x:Key="AccentLow">#999999</Color>
+	<Color x:Key="AccentMedium">#666666</Color>
+	<Color x:Key="AccentHigh">#333333</Color>
+
+	<SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource Background}" />
+	<SolidColorBrush x:Key="AccentLowBrush" Color="{StaticResource AccentLow}" />
+	<SolidColorBrush x:Key="AccentMediumBrush" Color="{StaticResource AccentMedium}" />
+	<SolidColorBrush x:Key="AccentHighBrush" Color="{StaticResource AccentHigh}" />
+
+</ResourceDictionary>

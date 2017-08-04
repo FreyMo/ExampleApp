@@ -2,19 +2,16 @@
 {
 	using Modules;
 	using Ninject;
-	using ViewModelLayer.Main;
 
-	public class ViewModelServiceLocator
+	public class CompositionRoot
 	{
 		private readonly IKernel _kernel = new StandardKernel();
 
-		public ViewModelServiceLocator()
+		public CompositionRoot()
 		{
 			_kernel.Load<ServiceLocationModule>();
 			_kernel.Load<TranslationModule>();
 			_kernel.Load<MainModule>();
 		}
-
-		public IMainWindowViewModel MainWindowViewModel => _kernel.Get<IMainWindowViewModel>();
 	}
 }

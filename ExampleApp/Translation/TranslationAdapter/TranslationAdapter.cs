@@ -33,7 +33,7 @@
 			translationMessenger.SubscribeTo(this);
 		}
 		
-		public object Value => _translator.Translate(_key);
+		public string Value => _translator.Translate(_key);
 
 		public void OnMessageReceived(CultureChangedMessage message)
 		{
