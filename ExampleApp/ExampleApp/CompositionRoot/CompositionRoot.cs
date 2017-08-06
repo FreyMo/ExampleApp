@@ -12,6 +12,7 @@
 			_kernel.Load<ServiceLocationModule>();
 			_kernel.Load<TranslationModule>();
 			_kernel.Load<MainModule>();
+			_kernel.Load<MatLabModule>();
 		}
 	}
 }

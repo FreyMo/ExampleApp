@@ -18,7 +18,7 @@
 		{
 			return Instance._kernel.Get(type);
 		}
-
+		
 		private ServiceLocator(IKernel kernel)
 		{
 			_kernel = kernel;

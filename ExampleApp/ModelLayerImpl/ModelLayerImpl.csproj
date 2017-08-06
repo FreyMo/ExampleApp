@@ -37,5 +37,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModelLayer\ModelLayer.csproj">
+      <Project>{d7e86b2b-2178-421a-9e23-bd686dd1047c}</Project>
+      <Name>ModelLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
