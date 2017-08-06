@@ -61,7 +61,7 @@
       <Project>{dfc42c3a-5cf6-4cd0-be1b-4531262ed3f1}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MatLabComponents\MatLab.csproj">
+    <ProjectReference Include="..\MatLab\MatLab.csproj">
       <Project>{07c438bc-7aa7-4a61-bf43-80318b1d09a3}</Project>
       <Name>MatLab</Name>
     </ProjectReference>
