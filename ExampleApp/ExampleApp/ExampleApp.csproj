@@ -108,37 +108,41 @@
       <Project>{0578B7B8-71C5-4EC3-AE52-F60E62F781B6}</Project>
       <Name>Messenger</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MatLabImpl\MatLabImpl.csproj">
+    <ProjectReference Include="..\MatLab\MatLabImpl\MatLabImpl.csproj">
       <Project>{7234f85b-d2d1-4d93-b5cb-d0fec88b5db7}</Project>
       <Name>MatLabImpl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MatLab\MatLab\MatLab.csproj">
+      <Project>{07c438bc-7aa7-4a61-bf43-80318b1d09a3}</Project>
+      <Name>MatLab</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelLayer\ModelImpl\ModelImpl.csproj">
+      <Project>{04a376eb-6d02-4892-922d-b2cefa873715}</Project>
+      <Name>ModelImpl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelLayer\Model\Model.csproj">
+      <Project>{d7e86b2b-2178-421a-9e23-bd686dd1047c}</Project>
+      <Name>Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\Translation\Translation.csproj">
       <Project>{c3500386-67b2-4c02-ba4d-83b7551f76ea}</Project>
       <Name>Translation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ModelLayerImpl\ModelLayerImpl.csproj">
-      <Project>{04a376eb-6d02-4892-922d-b2cefa873715}</Project>
-      <Name>ModelLayerImpl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ModelLayer\ModelLayer.csproj">
-      <Project>{d7e86b2b-2178-421a-9e23-bd686dd1047c}</Project>
-      <Name>ModelLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ServiceLocation\ServiceLocation.csproj">
       <Project>{498dc787-03ac-4ba1-841e-0762fc79fabd}</Project>
       <Name>ServiceLocation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ViewLayer\ViewLayer.csproj">
+    <ProjectReference Include="..\ViewLayer\View\View.csproj">
       <Project>{c3e2f4b1-0010-4a74-a39b-82f1adab758f}</Project>
-      <Name>ViewLayer</Name>
+      <Name>View</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ViewModelLayerImpl\ViewModelLayerImpl.csproj">
+    <ProjectReference Include="..\ViewModelLayer\ViewModelImpl\ViewModelImpl.csproj">
       <Project>{6205f10e-1760-4a13-94cb-42588b385063}</Project>
-      <Name>ViewModelLayerImpl</Name>
+      <Name>ViewModelImpl</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ViewModelLayer\ViewModelLayer.csproj">
+    <ProjectReference Include="..\ViewModelLayer\ViewModel\ViewModel.csproj">
       <Project>{6a25609d-ddc8-497a-bcbd-e91d2bd994bf}</Project>
-      <Name>ViewModelLayer</Name>
+      <Name>ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

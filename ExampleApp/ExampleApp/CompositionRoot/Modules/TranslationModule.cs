@@ -4,7 +4,7 @@
 	using Translation.TranslationMessenger;
 	using Translation.TranslationSelector;
 	using Translation.Translator;
-	using ViewLayer.Translation;
+	using View.Translation;
 
 	internal class TranslationModule : NinjectModule
 	{

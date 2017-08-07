@@ -1,8 +1,8 @@
 ﻿namespace ExampleApp.CompositionRoot.Modules
 {
 	using Ninject.Modules;
-	using ViewModelLayer.Main;
-	using ViewModelLayerImpl.Main;
+	using ViewModel.Main;
+	using ViewModelImpl.Main;
 
 	internal class MainModule : NinjectModule
 	{

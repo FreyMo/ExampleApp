@@ -1,13 +1,13 @@
 ﻿<Application x:Class="ExampleApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="pack://application:,,,/ViewLayer;component/Main/MainWindow.xaml">
+             StartupUri="pack://application:,,,/View;component/Main/MainWindow.xaml">
 	
     <Application.Resources>
 		<ResourceDictionary>
 			
 			<ResourceDictionary.MergedDictionaries>
-				<ResourceDictionary Source="pack://application:,,,/ViewLayer;component/Styles/Standard/Theme.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/View;component/Styles/Standard/Theme.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 			
 		</ResourceDictionary>
