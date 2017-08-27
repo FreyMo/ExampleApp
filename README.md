@@ -5,8 +5,9 @@ This is an example app that is used to demonstrate features that are being devel
 - Native MatLab integration
 - Neat argument checking
 - Async and sync implementations of ICommand
-- A generic messenger/event aggregator
+- A weak reference event aggregator
+- A disposable event aggregator
 - Base classes for the MVVM pattern
 - Clean MVVM pattern implementation
 - Service location and dependency injection
-- Convenient extensions
+- Exchangable IoC container adapter
