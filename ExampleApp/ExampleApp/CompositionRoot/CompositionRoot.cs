@@ -32,7 +32,7 @@
 
 			// MatLabModule
 			var temp = new MatLabBase();
-			var res = MatLabBase.GetFuncResult();
+			// var res = MatLabBase.GetFuncResult();
 		}
 	}
 }

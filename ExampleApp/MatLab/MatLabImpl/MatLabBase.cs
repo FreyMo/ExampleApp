@@ -7,7 +7,7 @@
 	{
 		public static int GetFuncResult()
 		{
-			return Task.Run(() => new MathLibNativeWrapper().Add(3, 6)).Result;
+			return Task.Run(() => new MathLibNativeWrapper().AddAsync(3, 6)).Result;
 		}
 	}
 }

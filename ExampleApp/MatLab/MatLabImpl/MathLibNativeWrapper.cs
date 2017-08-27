@@ -1,6 +1,7 @@
 ﻿namespace MatLabImpl
 {
 	using System;
+	using System.Threading.Tasks;
 	using Common.Dispose;
 	using Extensions;
 	using MathLibNative;
@@ -10,13 +11,15 @@
 	{
 		private readonly MathLib _native = new MathLib();
 
-		public T Add<T>(T first, T second) where T : struct, IComparable, IFormattable, IConvertible
+		public async Task<T> AddAsync<T>(T first, T second) where T : struct, IComparable, IFormattable, IConvertible
 		{
+			await Task.Yield();
 			return _native.Add(first, second).ToSingleValue<T>();
 		}
 
-		public T Substract<T>(T first, T second) where T : struct, IComparable, IFormattable, IConvertible
+		public async Task<T> SubstractAsync<T>(T first, T second) where T : struct, IComparable, IFormattable, IConvertible
 		{
+			await Task.Yield();
 			return _native.Substract(first, second).ToSingleValue<T>();
 		}
 
