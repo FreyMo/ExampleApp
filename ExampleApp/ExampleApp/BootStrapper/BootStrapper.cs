@@ -1,5 +1,6 @@
-﻿namespace ExampleApp.CompositionRoot
+﻿namespace ExampleApp.BootStrapper
 {
+	using System.Reflection;
 	using IoC;
 	using MatLabImpl;
 	using Translation.TranslationMessenger;
@@ -9,18 +10,20 @@
 	using ViewModel.Main;
 	using ViewModelImpl.Main;
 
-	public class CompositionRoot
+	public class BootStrapper
 	{
 		private readonly IIoCContainer _container;
 
-		public CompositionRoot(IIoCContainer container)
+		public BootStrapper(IIoCContainer container)
 		{
 			_container = container;
 
 			// TODO: Modules need to be sourced out!
 
 			// ServiceLocatorModule
-			var creator = new Creator(container);
+			// Some Reflection Hacks - need to fix this
+			var method = typeof(ServiceLocator).GetMethod("CreateInstance", BindingFlags.Static | BindingFlags.NonPublic);
+			method.Invoke(null, new object[] {container});
 
 			// TranslationModule
 			_container.RegisterSingleton<ITranslationSelector, TranslationSelector>();
@@ -31,7 +34,8 @@
 			_container.RegisterSingleton<IMainWindowViewModel, MainWindowViewModel>();
 
 			// MatLabModule
-			var temp = new MatLabBase();
+			_container.RegisterTransient<MatLabBase>();
+			// var temp = new MatLabBase();
 			// var res = MatLabBase.GetFuncResult();
 		}
 	}

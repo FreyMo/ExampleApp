@@ -1,7 +1,5 @@
 ﻿namespace IoC
 {
-	using System;
-
 	public class ServiceLocator
 	{
 		private readonly IIoCContainer _container;
@@ -13,17 +11,12 @@
 			return Instance._container.Resolve<T>();
 		}
 
-		//public object Get(Type type)
-		//{
-		//	return Instance._container.Resolve(type);
-		//}
-		
 		private ServiceLocator(IIoCContainer container)
 		{
 			_container = container;
 		}
 
-		internal static void CreateInstance(IIoCContainer container)
+		private static void CreateInstance(IIoCContainer container)
 		{
 			Instance = new ServiceLocator(container);
 		}
