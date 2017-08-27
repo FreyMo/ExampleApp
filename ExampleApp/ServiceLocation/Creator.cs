@@ -1,12 +1,12 @@
 ﻿namespace ServiceLocation
 {
-	using Ninject;
+	using IoC;
 
 	public class Creator
 	{
-		public Creator(IKernel kernel)
+		public Creator(IIoCContainer container)
 		{
-			ServiceLocator.CreateInstance(kernel);
+			ServiceLocator.CreateInstance(container);
 		}
 	}
 }

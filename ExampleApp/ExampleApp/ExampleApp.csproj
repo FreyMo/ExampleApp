@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -57,10 +58,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CompositionRoot\Modules\MainModule.cs" />
-    <Compile Include="CompositionRoot\Modules\MatLabModule.cs" />
-    <Compile Include="CompositionRoot\Modules\ServiceLocationModule.cs" />
-    <Compile Include="CompositionRoot\Modules\TranslationModule.cs" />
     <Compile Include="CompositionRoot\CompositionRoot.cs" />
     <Compile Include="Settings\Application.Designer.cs">
       <DependentUpon>Application.settings</DependentUpon>
@@ -107,6 +104,14 @@
     <ProjectReference Include="..\..\..\Common\Messenger\Messenger.csproj">
       <Project>{0578B7B8-71C5-4EC3-AE52-F60E62F781B6}</Project>
       <Name>Messenger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IoC\IoCImpl\IoCImpl.csproj">
+      <Project>{1d3b8e37-51f5-4487-a15b-d87ba02e3055}</Project>
+      <Name>IoCImpl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IoC\IoC\IoC.csproj">
+      <Project>{c372debf-038c-4cc2-a671-5a53ea0e6060}</Project>
+      <Name>IoC</Name>
     </ProjectReference>
     <ProjectReference Include="..\MatLab\MatLabImpl\MatLabImpl.csproj">
       <Project>{7234f85b-d2d1-4d93-b5cb-d0fec88b5db7}</Project>

@@ -1,32 +1,32 @@
 ﻿namespace ServiceLocation
 {
 	using System;
-	using Ninject;
+	using IoC;
 
 	public class ServiceLocator
 	{
-		private readonly IKernel _kernel;
+		private readonly IIoCContainer _container;
 
 		public static ServiceLocator Instance { get; private set; }
 
 		public T Get<T>()
 		{
-			return Instance._kernel.Get<T>();
+			return Instance._container.Resolve<T>();
 		}
 
 		public object Get(Type type)
 		{
-			return Instance._kernel.Get(type);
+			return Instance._container.Resolve(type);
 		}
 		
-		private ServiceLocator(IKernel kernel)
+		private ServiceLocator(IIoCContainer container)
 		{
-			_kernel = kernel;
+			_container = container;
 		}
 
-		internal static void CreateInstance(IKernel kernel)
+		internal static void CreateInstance(IIoCContainer container)
 		{
-			Instance = new ServiceLocator(kernel);
+			Instance = new ServiceLocator(container);
 		}
 	}
 }
