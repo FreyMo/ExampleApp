@@ -55,9 +55,9 @@
       <Project>{0578B7B8-71C5-4EC3-AE52-F60E62F781B6}</Project>
       <Name>Messenger</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceLocation\ServiceLocation.csproj">
-      <Project>{498dc787-03ac-4ba1-841e-0762fc79fabd}</Project>
-      <Name>ServiceLocation</Name>
+    <ProjectReference Include="..\IoC\IoC\IoC.csproj">
+      <Project>{C372DEBF-038C-4CC2-A671-5A53EA0E6060}</Project>
+      <Name>IoC</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

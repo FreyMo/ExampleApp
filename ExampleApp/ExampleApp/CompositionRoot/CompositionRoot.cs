@@ -2,7 +2,6 @@
 {
 	using IoC;
 	using MatLabImpl;
-	using ServiceLocation;
 	using Translation.TranslationMessenger;
 	using Translation.TranslationSelector;
 	using Translation.Translator;

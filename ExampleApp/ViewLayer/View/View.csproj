@@ -146,9 +146,9 @@
       <Project>{0578b7b8-71c5-4ec3-ae52-f60e62f781b6}</Project>
       <Name>Messenger</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ServiceLocation\ServiceLocation.csproj">
-      <Project>{498dc787-03ac-4ba1-841e-0762fc79fabd}</Project>
-      <Name>ServiceLocation</Name>
+    <ProjectReference Include="..\..\IoC\IoC\IoC.csproj">
+      <Project>{c372debf-038c-4cc2-a671-5a53ea0e6060}</Project>
+      <Name>IoC</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Translation\Translation.csproj">
       <Project>{c3500386-67b2-4c02-ba4d-83b7551f76ea}</Project>

@@ -133,10 +133,6 @@
       <Project>{c3500386-67b2-4c02-ba4d-83b7551f76ea}</Project>
       <Name>Translation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceLocation\ServiceLocation.csproj">
-      <Project>{498dc787-03ac-4ba1-841e-0762fc79fabd}</Project>
-      <Name>ServiceLocation</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ViewLayer\View\View.csproj">
       <Project>{c3e2f4b1-0010-4a74-a39b-82f1adab758f}</Project>
       <Name>View</Name>

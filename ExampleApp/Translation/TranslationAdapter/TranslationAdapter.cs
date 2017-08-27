@@ -2,8 +2,8 @@
 {
 	using Common.ArgumentMust;
 	using Common.Notification;
+	using IoC;
 	using Messenger.Messenger;
-	using ServiceLocation;
 	using TranslationMessenger;
 	using Translator;
 
@@ -14,8 +14,8 @@
 		
 		public TranslationAdapter(string key) : this(
 			key,
-			ServiceLocator.Instance.Get<ITranslator>(),
-			ServiceLocator.Instance.Get<ITranslationMessenger>())
+			ServiceLocator.Instance.Resolve<ITranslator>(),
+			ServiceLocator.Instance.Resolve<ITranslationMessenger>())
 		{
 		}
 

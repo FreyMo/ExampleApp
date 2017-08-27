@@ -5,8 +5,8 @@
 	using System.Linq;
 	using Common.ArgumentMust;
 	using Common.Notification;
+	using IoC;
 	using Messenger.Messenger;
-	using ServiceLocation;
 	using TranslationMessenger;
 	using Translator;
 
@@ -16,8 +16,8 @@
 
 		public TranslatableEnumAdapter(Type enumType) : this(
 			enumType,
-			ServiceLocator.Instance.Get<ITranslator>(),
-			ServiceLocator.Instance.Get<ITranslationMessenger>())
+			ServiceLocator.Instance.Resolve<ITranslator>(),
+			ServiceLocator.Instance.Resolve<ITranslationMessenger>())
 		{
 		}
 

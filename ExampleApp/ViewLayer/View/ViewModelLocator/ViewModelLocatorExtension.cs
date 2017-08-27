@@ -2,6 +2,7 @@
 {
 	using System;
 	using System.Windows.Markup;
+	using IoC;
 
 	public class ViewModelLocatorExtension : MarkupExtension
 	{
@@ -10,7 +11,8 @@
 
 		public override object ProvideValue(IServiceProvider serviceProvider)
 		{
-			return ServiceLocation.ServiceLocator.Instance.Get(ViewModelType);
+			var resolveMethod = typeof(ServiceLocator).GetMethod("Resolve").MakeGenericMethod(ViewModelType);
+			return resolveMethod.Invoke(ServiceLocator.Instance, new object[] { });
 		}
 	}
 }
